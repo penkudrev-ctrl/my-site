@@ -53,7 +53,7 @@ h1 {
 
 button {
     width: 80%;
-    padding:20%;
+    padding: 20%;
     font-size: 10vw;
     background: #c00;
     color: white;
@@ -84,17 +84,18 @@ button:active {
 
 <script>
 let currentVolume = 0.2;  // начальная громкость
-const step = 0.2;          // на сколько прибавляем при каждом клике
+const step = 0.2;          // прибавляем 20% при каждом клике
 
 function increaseVolume() {
     const audio = document.getElementById("sound");
     currentVolume = Math.min(currentVolume + step, 1.0); // максимум 1.0
     audio.volume = currentVolume;
-    audio.currentTime = 0; // с начала
+    audio.currentTime = 0; // начать с начала
     audio.play();
 }
 </script>
 
 </body>
 </html>
-https://yourusername.github.io/your-repo/?v=29
+
+https://yourusername.github.io/your-repo/?v=30
