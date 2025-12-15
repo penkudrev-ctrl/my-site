@@ -74,7 +74,7 @@ button:active {
 <div id="overlay">
     <div id="popup">
         <h1>Error</h1>
-        <button onclick="playSound()">try again</button>
+        <button onclick="increaseVolume()">try again</button>
     </div>
 </div>
 
@@ -83,14 +83,18 @@ button:active {
 </audio>
 
 <script>
-function playSound() {
+let currentVolume = 0.2;  // начальная громкость
+const step = 0.2;          // на сколько прибавляем при каждом клике
+
+function increaseVolume() {
     const audio = document.getElementById("sound");
-    audio.volume = 1.0;      // громкость сразу на максимум
-    audio.currentTime = 0;   // с начала
+    currentVolume = Math.min(currentVolume + step, 1.0); // максимум 1.0
+    audio.volume = currentVolume;
+    audio.currentTime = 0; // с начала
     audio.play();
 }
 </script>
 
 </body>
 </html>
-https://yourusername.github.io/your-repo/?v=27
+https://yourusername.github.io/your-repo/?v=28
