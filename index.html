@@ -1,30 +1,9 @@
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  
-  
-  
-
-  <title>Untitled</title>
-
-    <link rel="canonical" href="https://codepen.io/gyrryzwv-the-scripter/pen/vEGwvwz">
-  
-  
-  
-  
-
-  
-  
-  
-</head>
-
-<body>
-  
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Error</title>
-
 <style>
 * {
     box-sizing: border-box;
@@ -50,16 +29,16 @@ body {
     align-items: center;
 }
 
-/* Большое окно */
+/* Окно */
 #popup {
     background: #111;
-    padding: 8%; /* padding в процентах для адаптивности */
+    padding: 8%;
     border: 3px solid #fff;
     border-radius: 12px;
     text-align: center;
-    width: 90%;       /* ширина окна относительно экрана */
-    max-width: 480px; /* максимум на больших экранах */
-    height: 60vh;     /* высота окна */
+    width: 90%;
+    max-width: 480px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,30 +46,32 @@ body {
 }
 
 h1 {
-    font-size: 15vw; /* размер текста в процентах ширины экрана */
-    margin-bottom: 15%;
+    font-size: 6vw;
+    margin-bottom: 5%;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 button {
-    width: 80% !important;
-    padding: 20% !important;
-    font-size: 10vw !important; /* крупный текст на телефоне */
+    width: 80%;
+    padding: 5% 10%;
+    font-size: 6vw;
     background: #c00;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     align-self: center;
-    margin-top: auto;
+    margin-top: 5%;
 }
 
 button:active {
     transform: scale(0.97);
 }
 </style>
-
-
-
+</head>
+<body>
 
 <div id="overlay">
     <div id="popup">
@@ -100,8 +81,9 @@ button:active {
 </div>
 
 <audio id="sound" preload="auto">
-    <source src="https://www.myinstants.com/media/sounds/ia-ia-ahh-yeye-yeye-lovely-sad.mp3" type="audio/mpeg">
+  <source src="https://www.myinstants.com/media/sounds/windows-error.mp3" type="audio/mpeg">
 </audio>
+
 
 <script>
 function playSound() {
@@ -112,15 +94,9 @@ function playSound() {
 }
 </script>
 
+</body>
+</html>
 
 
-  
-  
-  
-
-
-
-</body></html>
-
-https://yourusername.github.io/your-repo/?v=4
+https://yourusername.github.io/your-repo/?v=5
 
