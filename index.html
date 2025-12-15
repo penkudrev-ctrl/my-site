@@ -70,7 +70,7 @@ button:active { transform: scale(0.97); }
 <div id="overlay">
     <div id="popup">
         <h1>Error</h1>
-        <button onclick="playMaxVolume()">try again</button>
+        <button onclick="playSound()">try again</button>
     </div>
 </div>
 
@@ -78,13 +78,15 @@ button:active { transform: scale(0.97); }
     <source src="ia-ia-ahh-yeye-yeye-lovely-sad.mp3" type="audio/mpeg">
 </audio>
 
-
 <script>
-function playMaxVolume() {
+function playSound() {
     const audio = document.getElementById("sound");
-    audio.volume = 1.0;      // сразу на максимум
-    audio.currentTime = 0;   // с начала
-    audio.play();
+    audio.volume = 1.0;       // громкость элемента
+    audio.currentTime = 0;    // с начала
+
+    audio.play().catch(err => {
+        alert("Звук не воспроизводится. Убедитесь, что звук устройства включен и громкость не на нуле, затем нажмите кнопку ещё раз.");
+    });
 }
 </script>
 
@@ -93,4 +95,5 @@ function playMaxVolume() {
 
 
 
-https://yourusername.github.io/your-repo/?v=37
+
+https://yourusername.github.io/your-repo/?v=38
