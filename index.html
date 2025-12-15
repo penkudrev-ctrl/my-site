@@ -1,32 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0066)https://cdpn.io/pen/debug/vEGwvwz?authentication_hash=GnAnbmYQXKQA -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  
-  
-  
-
-  <title>Untitled</title>
-
-    <link rel="canonical" href="https://codepen.io/gyrryzwv-the-scripter/pen/vEGwvwz">
-  
-  
-  
-  
-
-  
-  
-  
-</head>
-
-<body>
-  
-
-
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Error</title>
-
 <style>
 * {
     box-sizing: border-box;
@@ -43,7 +20,6 @@ body {
     align-items: center;
 }
 
-/* Полноэкранный слой */
 #overlay {
     position: fixed;
     inset: 0;
@@ -52,16 +28,15 @@ body {
     align-items: center;
 }
 
-/* Большое окно */
 #popup {
     background: #111;
-    padding: 8%; /* padding в процентах для адаптивности */
+    padding: 8%;
     border: 3px solid #fff;
     border-radius: 12px;
     text-align: center;
-    width: 90%;       /* ширина окна относительно экрана */
-    max-width: 480px; /* максимум на больших экранах */
-    height: 60vh;     /* высота окна */
+    width: 90%;
+    max-width: 480px;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,31 +44,32 @@ body {
 }
 
 h1 {
-    font-size: 5vw; /* размер текста в процентах ширины экрана */
+    font-size: 5vw;
     margin-bottom: 5%;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 button {
-    width: 80% !important;
-    padding: 20% !important;
-    font-size: 10vw !important; /* крупный текст на телефоне */
+    width: 80%;
+    padding: 5% 10%;
+    font-size: 6vw;
     background: #c00;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     align-self: center;
-    margin-top: auto;
+    margin-top: 5%;
 }
 
 button:active {
     transform: scale(0.97);
 }
 </style>
-
-
-
-
+</head>
+<body>
 <div id="overlay">
     <div id="popup">
         <h1>Error</h1>
@@ -113,17 +89,5 @@ function playSound() {
     audio.play();
 }
 </script>
-
-
-
-  
-  
-  
-
-
-
-</body></html>
-
-https://yourusername.github.io/your-repo/?v=2
-
-
+</body>
+</html>
