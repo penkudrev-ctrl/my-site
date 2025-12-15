@@ -70,7 +70,7 @@ button:active { transform: scale(0.97); }
 <div id="overlay">
     <div id="popup">
         <h1>Error</h1>
-        <button onclick="playGradual()">try again</button>
+        <button onclick="playMaxVolume()">try again</button>
     </div>
 </div>
 
@@ -79,20 +79,11 @@ button:active { transform: scale(0.97); }
 </audio>
 
 <script>
-function playGradual() {
+function playMaxVolume() {
     const audio = document.getElementById("sound");
-    audio.volume = 0.0;      // старт с тишины
-    audio.currentTime = 0;
+    audio.volume = 1.0;      // сразу на максимум
+    audio.currentTime = 0;   // с начала
     audio.play();
-
-    const step = 0.05;       // прибавляем 5% каждые 200 мс
-    const interval = setInterval(() => {
-        if(audio.volume < 1.0) {
-            audio.volume = Math.min(audio.volume + step, 1.0);
-        } else {
-            clearInterval(interval);
-        }
-    }, 200);
 }
 </script>
 
@@ -101,4 +92,4 @@ function playGradual() {
 
 
 
-https://yourusername.github.io/your-repo/?v=35
+https://yourusername.github.io/your-repo/?v=36
