@@ -20,7 +20,6 @@ body {
     align-items: center;
 }
 
-/* Полноэкранный слой */
 #overlay {
     position: fixed;
     inset: 0;
@@ -29,7 +28,6 @@ body {
     align-items: center;
 }
 
-/* Окно */
 #popup {
     background: #111;
     padding: 8%;
@@ -81,22 +79,17 @@ button:active {
 </div>
 
 <audio id="sound" preload="auto">
-  <source src="https://www.myinstants.com/media/sounds/windows-error.mp3" type="audio/mpeg">
+    <source src="https://www.myinstants.com/media/sounds/ia-ia-ahh-yeye-yeye-lovely-sad.mp3" type="audio/mpeg">
 </audio>
-
 
 <script>
 function playSound() {
     const audio = document.getElementById("sound");
-    audio.volume = 1.0;
-    audio.currentTime = 0;
+    audio.volume = 1.0;      // громкость сразу на максимум
+    audio.currentTime = 0;   // с начала
     audio.play();
 }
 </script>
 
 </body>
 </html>
-
-
-https://yourusername.github.io/your-repo/?v=5
-
