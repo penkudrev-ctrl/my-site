@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Error</title>
 <style>
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -64,9 +62,7 @@ button {
     margin-top: auto;
 }
 
-button:active {
-    transform: scale(0.97);
-}
+button:active { transform: scale(0.97); }
 </style>
 </head>
 <body>
@@ -74,7 +70,7 @@ button:active {
 <div id="overlay">
     <div id="popup">
         <h1>Error</h1>
-        <button onclick="increaseVolume()">try again</button>
+        <button onclick="playMaxVolume()">try again</button>
     </div>
 </div>
 
@@ -83,14 +79,10 @@ button:active {
 </audio>
 
 <script>
-let currentVolume = 0.2;  // начальная громкость
-const step = 0.2;          // прибавляем 20% при каждом клике
-
-function increaseVolume() {
+function playMaxVolume() {
     const audio = document.getElementById("sound");
-    currentVolume = Math.min(currentVolume + step, 1.0); // максимум 1.0
-    audio.volume = currentVolume;
-    audio.currentTime = 0; // начать с начала
+    audio.volume = 1.0;      // сразу на максимум
+    audio.currentTime = 0;   // с начала
     audio.play();
 }
 </script>
@@ -98,4 +90,5 @@ function increaseVolume() {
 </body>
 </html>
 
-https://yourusername.github.io/your-repo/?v=30
+
+https://yourusername.github.io/your-repo/?v=31
